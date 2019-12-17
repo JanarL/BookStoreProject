@@ -37,6 +37,12 @@ namespace BookStore.Controllers
             return View(book);
         }
 
+        // GET: Books/Create
+        public ActionResult Create()
+        {
+            return View();
+        }
+
         public ActionResult AddToCart(Guid? id)
         {
             if (id == null)

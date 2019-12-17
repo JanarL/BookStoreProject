@@ -32,8 +32,9 @@
             @Html.DisplayFor(modelItem => item.Paid)
         </td>
         <td>
-            @Html.ActionLink("Details", "Details", new { id = item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+            @Html.ActionLink("Details", "../Books/Details/", new { id = item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.Id }) |
+            @Html.ActionLink("Pay", "CartPayment", new { id = item.Id })
         </td>
     </tr>
 }

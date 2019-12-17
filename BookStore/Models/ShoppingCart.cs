@@ -36,9 +36,10 @@ namespace BookStore.Models
             Items.Remove(book);
             Sum -= book.Price;
         }
-        public void Payment()
+        public void CartPayment(ShoppingCart cart)
         {
-            Paid = true;
+            Boolean ispaid = true;
+            cart.Paid = ispaid;
         }
     }
 }

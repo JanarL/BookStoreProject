@@ -117,6 +117,23 @@ namespace BookStore.Controllers
             return RedirectToAction("Index");
         }
 
+        public ActionResult CartPayment(Guid? id)
+        {
+            if(id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            ShoppingCart shoppingcart = db.ShoppingCarts.Find(id);
+            if(shoppingcart == null)
+            {
+                return HttpNotFound();
+            }
+            shoppingcart.Paid = true;
+
+            db.SaveChanges();
+
+            return RedirectToAction("Details", "ShoppingCarts", new { id = shoppingcart.Id });
+        }
         protected override void Dispose(bool disposing)
         {
             if (disposing)
