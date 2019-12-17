@@ -53,6 +53,22 @@ namespace BookStore.DatabaseContext
                     Description = "The day that Arthur Red got lost.",
                     Year = 2018,
                     Price = 15
+                },
+                new Book
+                {
+                    Name = "Hello Friend",
+                    Author = "Arthur Red",
+                    Description = "Truth about the society.",
+                    Year = 2019,
+                    Price = 20
+                },
+                new Book
+                {
+                    Name = "In Control",
+                    Author = "Mason Sam",
+                    Description = "How Mason gained control over everything",
+                    Year = 2017,
+                    Price = 25
                 }
                 );
         }
